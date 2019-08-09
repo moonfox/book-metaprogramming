@@ -18,12 +18,10 @@ lambda {
   load File.expand_path('load_file.rb', File.dirname(__FILE__))
 
   puts '=======不带true======='
-  puts Car.new.engine_start
-  puts "your_name: #{your_name}"
 }
 
 # =============================
-# 目标1:
+# 目标2:
 # 1. 带true
 # =============================
 # 结论
@@ -37,6 +35,7 @@ lambda {
   load File.expand_path('load_file.rb', File.dirname(__FILE__)), true
 
   puts '=======带true======='
-  puts "your_name: #{your_name}"
-  puts Car.new.engine_start
 }
+
+puts "your_name: #{your_name}"
+puts Car.new.engine_start
