@@ -9,7 +9,7 @@
 # =============================
 lambda {
   puts self # => main
-  puts self.class  # => Object
+  puts self.class # => Object
 }
 
 # =============================
