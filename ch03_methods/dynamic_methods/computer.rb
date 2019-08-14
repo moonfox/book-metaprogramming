@@ -1,4 +1,4 @@
-require File.expand_path('db', File.dirname(__FILE__))
+require File.expand_path('../lib/db', File.dirname(__FILE__))
 
 class Computer
   def initialize(id)
