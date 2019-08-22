@@ -31,11 +31,11 @@ self.instance_eval do
 end
 
 puts my_method
-puts "Object.private_instance_methods:" + 
+puts "Object.private_instance_methods:" +
       Object.private_instance_methods(false).grep(:my_method).to_s # :my_method
-puts "Object.instance_methods:" + 
+puts "Object.instance_methods:" +
       Object.instance_methods(false).grep(:my_method).to_s #nil
-puts "Object.private_methods:" + 
+puts "Object.private_methods:" +
       Object.private_methods(false).grep(:my_method).to_s #nil
 puts "main.private_methods:" +
       self.private_methods(false).grep(:my_method).to_s # :my_method
