@@ -2,8 +2,8 @@
 # 定义类时，类作用域中的代码是立刻执行的
 
 v1 = 1
-# 进入MyClass作用域
-class MyClass
+# 进入MyScope作用域
+class MyScope
   v2 = 2
   # 立刻执行
   p local_variables # => [:v2]
@@ -17,10 +17,10 @@ class MyClass
   # 立刻执行
   p local_variables # => [:v2]
 end
-# MyClass作用域结束
+# MyScope作用域结束
 
 # 进入顶级作用域
-obj = MyClass.new
+obj = MyScope.new
 
 # 进入obj对象作用域
 obj.my_method # => [:v3]
