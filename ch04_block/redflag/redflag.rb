@@ -16,6 +16,8 @@ lambda {
     end
   end
 
+  # 数组中的元素如何执行，怎样执行，交由block（块）中的代码决定
+  # 这一点很像[].each {|arg|}方法
   define_method :event_each do |&block|
     events.each do |event|
       block.call(event)
@@ -30,7 +32,7 @@ lambda {
     setup_each { |setup| setup.call }
     puts "ALERT: #{event[:name]}" if event[:event].call
   end
-}.call
+}
 
 # 使用洁净室
 lambda {
